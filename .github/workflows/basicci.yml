@@ -33,3 +33,8 @@ jobs:
       with:
         files: build/
         dest: result.zip
+    - name: Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "result.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
